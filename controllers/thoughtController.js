@@ -4,7 +4,7 @@ module.exports = {
   // GET all Thoughts
   getThoughts(req, res) {
     Thought.find()
-      .then((thought) => res.json(thought))
+      .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
   // GET single thought by _id
@@ -34,7 +34,7 @@ module.exports = {
               .json({
                 message: "Thought created, but User not found with that Id",
               })
-          : res.json("Thought successfully created!")
+          : res.json("Thought successfully created!"),
       )
       .catch((err) => res.status(500).json(err));
   },

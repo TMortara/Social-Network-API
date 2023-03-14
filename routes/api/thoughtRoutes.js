@@ -13,7 +13,7 @@ const {
 // const { create } = require('../../models/Thought');
 
 // /api/thoughts
-router.route("/").get(getThoughts).post(createThought);
+router.route('/').get(getThoughts).post(createThought);
 
 // /api/thoughts/:thoughtId
 router

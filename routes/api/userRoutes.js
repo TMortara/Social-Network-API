@@ -12,13 +12,15 @@ const {
 
 // const { create } = require('../../models/User');
 
+// /api/users
 router.route("/").get(getUsers).post(createUser);
 
+// /api/users/:userId
 router.route("/:userId").get(getSingleUser).put(updateUser).delete(deleteUser);
 
 // /api/users/:userId/friends/:friendId
 router
-  .route("/:usersId/friends/:friendsId")
+  .route("/:userId/friends/:friendsId")
   .post(addFriend)
   .delete(deleteFriend);
 
