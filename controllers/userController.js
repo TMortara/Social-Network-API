@@ -12,7 +12,7 @@ module.exports = {
     User.findOne({ _id: req.params.userId })
         .select('-__v')
         .populate('friends')
-        .populate('thoughts')
+        // .populate('thoughts')
      
 
     //   .populate({ path: "thought", select: "-__v" })
@@ -77,7 +77,7 @@ module.exports = {
   deleteFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
-      { $pull: { friends: { userId: req.params.userId } } },
+      { $pull: { friends: req.params.friendId } },
       { runValidators: true, new: true }
     )
       .then((user) =>

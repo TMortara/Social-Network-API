@@ -4,7 +4,7 @@ module.exports = {
   // GET all Thoughts
   getThoughts(req, res) {
     Thought.find()
-      .then((thoughts) => res.json(thoughts))
+      .then((thought) => res.json(thought))
       .catch((err) => res.status(500).json(err));
   },
   // GET single thought by _id

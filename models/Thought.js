@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
-const { DateTime } = require('luxon');
+const { Schema, model, Types } = require('mongoose');
+const moment = require('moment');
 
 // Reactions subdocument schema
 const reactionSchema = new Schema(
@@ -20,15 +20,19 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: function() {
-                return DateTime.fromJSDate(this.createdAt).toLocaleString(DateTime.DATETIME_FULL);
-            },
+         
         },   
     },
     {
         toJSON: {
+           
             getters: true,
-        }
+            transform: (doc, ret) => {
+                ret.createdAt = moment(ret.createdAt).format('MMMM-DD-YYYY, h:mm:ss A');
+                return ret;
+            },
+        },
+        id: false,
     }
 );
 
@@ -44,9 +48,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: function() {
-                return DateTime.fromJSDate(this.createdAt).toLocaleString(DateTime.DATETIME_FULL);
-            }
+           
         },
         username: {
             type: String,
@@ -62,7 +64,12 @@ const thoughtSchema = new Schema(
     {
         toJSON: {
             virtuals: true,
+       
             getters: true,
+            transform: (doc, ret) => {
+                ret.createdAt = moment(ret.createdAt).format('MMMM-DD-YYYY, h:mm:ss A');
+                return ret;
+            },
         },
         id: false,
     }

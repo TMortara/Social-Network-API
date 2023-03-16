@@ -43,6 +43,13 @@ userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
 
+userSchema.pre('remove', function() {
+    Thought.deleteMany(
+        { _id: req.params.thoughtId }
+    )
+    next();
+});
+
 const User = model('User', userSchema);
 
 module.exports = User;
