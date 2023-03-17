@@ -54,10 +54,10 @@ const thoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        // userId: {
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'User'
-        // },
+        userId: {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        },
         // Array that will hold all of the reactions
         reactions: [reactionSchema],
     },
