@@ -29,11 +29,10 @@ After installing Node.js, open the integrated terminal in VS Code and run `npm i
 
 ## Built With:
 
-![Built With](https://skills.thijs.gg/icons?i=js,html,nodejs,mongodb&theme=dark)
+![Built With](https://skills.thijs.gg/icons?i=js,nodejs,mongodb&theme=dark)
 
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![ExpressJS](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
-
-### Also Built With; 
+### Other Technologies Used: 
+- Express.js
 - Mongoose
 - Moment
 
