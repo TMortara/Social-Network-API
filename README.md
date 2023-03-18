@@ -41,7 +41,7 @@ After installing Node.js, open the integrated terminal in VS Code and run `npm i
 
 ## Recording
 
-[![Social Network API]](https://watch.screencastify.com/v/aQTDXKkiFPhYaSOfBbst)
+[![Social Network API](https://watch.screencastify.com/v/aQTDXKkiFPhYaSOfBbst)](https://watch.screencastify.com/v/aQTDXKkiFPhYaSOfBbst)
 
 ## Main Menu Prompt Screenshots
 
