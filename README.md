@@ -41,6 +41,7 @@ After installing Node.js, open the integrated terminal in VS Code and run `npm i
 
 ## Recording
 
+https://watch.screencastify.com/v/aQTDXKkiFPhYaSOfBbst
 
 ## Main Menu Prompt Screenshots
 
