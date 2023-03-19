@@ -27,6 +27,7 @@ const reactionSchema = new Schema(
         toJSON: {
            
             getters: true,
+            // Format date and time when a reaction is posted
             transform: (doc, ret) => {
                 ret.createdAt = moment(ret.createdAt).format('MMMM-DD-YYYY, h:mm:ss A');
                 return ret;
@@ -66,6 +67,7 @@ const thoughtSchema = new Schema(
             virtuals: true,
        
             getters: true,
+            // Format Date and Time when a thought is posted
             transform: (doc, ret) => {
                 ret.createdAt = moment(ret.createdAt).format('MMMM-DD-YYYY, h:mm:ss A');
                 return ret;
@@ -75,6 +77,7 @@ const thoughtSchema = new Schema(
     }
 );
 
+// Virtual will add 1 to the reaction count when a reaction is added to the reactions array
 thoughtSchema.virtual('reactionCount').get(function () {
     return this.reactions.length;
 });

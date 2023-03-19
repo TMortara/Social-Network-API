@@ -10,8 +10,6 @@ const {
   deleteReaction,
 } = require("../../controllers/thoughtController");
 
-// const { create } = require('../../models/Thought');
-
 // /api/thoughts
 router.route('/').get(getThoughts).post(createThought);
 

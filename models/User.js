@@ -14,9 +14,6 @@ const userSchema = new Schema(
             required: true,
             unique: true,
             match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'You must add a valid email address'],
-            // validate: (value) => {
-            //     return validator.isEmail(value);
-            // }
         },
         thoughts: [
             {
@@ -39,10 +36,12 @@ const userSchema = new Schema(
     }
 );
 
+// Virtual will add one to the friend count each time a friend is added to the friends array
 userSchema.virtual('friendCount').get(function () {
     return this.friends.length;
 });
 
+// Delete thought associated with a user when the user is deleted
 userSchema.pre('remove', function() {
     Thought.deleteMany(
         { _id: req.params.thoughtId }

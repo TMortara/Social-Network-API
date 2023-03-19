@@ -12,11 +12,7 @@ module.exports = {
     User.findOne({ _id: req.params.userId })
         .select('-__v')
         .populate('friends')
-        // .populate('thoughts')
-     
-
-    //   .populate({ path: "thought", select: "-__v" })
-    //   .populate({ path: "user", select: "friends" })
+        
       .then((user) =>
         !user
           ? res.status(400).json({ message: "User not found with that Id" })
