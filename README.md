@@ -11,7 +11,7 @@
 - [Resources Used to Complete Project](#resources-used-to-complete-project)
 - [License](#license)
 - [Recording](#recording)
-- [Screenshots of Application](#screenshots-of-application)
+- [Screenshots](#screenshots)
 
 ## Installation Steps
 Before using this application you must [install Node.js](https://nodejs.org/en/).
@@ -27,7 +27,7 @@ After installing Node.js, open the integrated terminal in VS Code and run `npm i
 2. Open integrated terminal in VS Code and type `node server.js` to begin the application.
 3. 
 
-## Built With:
+## Built With
 
 ![Built With](https://skills.thijs.gg/icons?i=js,nodejs,mongodb&theme=dark)
 
@@ -37,10 +37,16 @@ After installing Node.js, open the integrated terminal in VS Code and run `npm i
 - Moment
 
 ## Credits
+- Torre and Jason for helping me work through issues with a couple of my routes.
 
-
-### Resources Used to Complete Project
-
+## Resources Used to Complete Project
+- Activity and Mini Project examples from Week 18 class respository
+- [Mongoose Documentation: Models](https://mongoosejs.com/docs/models.html)
+- [Mongoose Documentation: Subdocuments](https://mongoosejs.com/docs/subdocs.html)
+- [Mongoose Documentation: Virtuals](https://mongoosejs.com/docs/tutorials/virtuals.html)
+- [Mongoose Documentation: SchemaTypes](https://mongoosejs.com/docs/schematypes.html)
+- [Introduction to Mongoose for MongoDB](https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/)
+- [Momentjs](https://momentjs.com/)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
