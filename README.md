@@ -6,6 +6,10 @@ The Social Network API was created to allow for the creation, update, and edit o
 ## Table of Contents
 - [Installation Steps](#installation-steps)
 - [Usage](#usage)
+    -   [Available GET Routes](#available-get-routes)
+    -   [Available POST Routes](#available-post-routes)
+    -   [Available PUT Routes](#available-put-routes)
+    -   [Available DELETE Routes](#available-delete-routes)
 - [Built With](#built-with)
 - [File Structure](#file-structure)
 - [Credits](#credits)
@@ -106,7 +110,12 @@ The Social Network API consists of 4 `DELETE` routes:
 - Moment.js
 
 ## File Structure
-
+The directory for this application is as follows:
+ - config/ - connection file for the database
+ - controller/ - creates the controller for the api routes for Users and Thoughts
+ - models/ - creates the models for Users and Thoughts and the Schema for the Reaction
+ - routes/ - contains the routes
+            
 ## Credits
 - Torre and Jason for helping me work through issues with a couple of my routes.
 
