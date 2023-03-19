@@ -43,12 +43,15 @@ The Social Network API consists of 4 `GET` routes:
 ### POST Routes
 The Social Network API consists of 4 `POST` routes:
 1. POST new User - `/users`
-  - Email Validation
+    -   Sample JSON Body: `{ "username": "jojorabbit", "email": "jojo.rabbit@gmail.com" }`
+    -   Email Validation: Users must have a valid email address before the user can be created.  Email addresses are validated using the `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` regular expression.    
 2. POST new Thought - `/thoughts`
-  - Moment
+    -   Sample JSON Body: `{ "thoughtText": "Case Closed", "username": "jojorabbit", "userId": "640fd5f84494b938f5a1b1c0" }`
+    -   Moment.js npm package is used to format the `createdAt` date
 3. POST Reaction to a User Thought `/thought/:thoughtId/reactions`
-  - Moment
-5. POST User to User's Friends Array `/users/:userId/friends/:friendsId`
+    -   Sample JSON Body: `{ "reactionBody": "Is it thought?", "username": "captaink" }`
+    -   Moment.js npm package is used to format the `createdAt` date
+4. POST User to User's Friends Array `/users/:userId/friends/:friendsId`
 
 ### PUT Routes
 The Social Network API consists of 2 `PUT` (update) routes:
@@ -70,7 +73,7 @@ The Social Network API consists of 4 `DELETE` routes:
 - Express.js
 - Mongoose
 - Insomnia
-- Moment
+- Moment.js
 
 ## File Structure
 
@@ -84,7 +87,7 @@ The Social Network API consists of 4 `DELETE` routes:
 - [Mongoose Documentation: Virtuals](https://mongoosejs.com/docs/tutorials/virtuals.html)
 - [Mongoose Documentation: SchemaTypes](https://mongoosejs.com/docs/schematypes.html)
 - [Introduction to Mongoose for MongoDB](https://www.freecodecamp.org/news/introduction-to-mongoose-for-mongodb-d2a7aa593c57/)
-- [Momentjs](https://momentjs.com/)
+- [Moment.js](https://momentjs.com/)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
